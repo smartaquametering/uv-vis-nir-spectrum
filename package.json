@@ -1,0 +1,78 @@
+{
+  "name": "uv-vis-nir-spectrum",
+  "version": "1.1.0",
+  "description": "",
+  "main": "lib/index.js",
+  "module": "src/index.js",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "build": "cheminfo-build  --entry src/index.js --root SPD",
+    "build-doc": "cheminfo doc",
+    "eslint": "eslint src",
+    "eslint-fix": "npm run eslint -- --fix",
+    "prepublishOnly": "rollup -c",
+    "test": "npm run test-coverage && npm run eslint",
+    "test-coverage": "jest --coverage",
+    "test-only": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheminfo/uv-vis-nir-spectrum.git"
+  },
+  "keywords": [],
+  "author": "Joerg Heinemann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cheminfo/uv-vis-nir-spectrum/issues"
+  },
+  "homepage": "https://github.com/cheminfo/uv-vis-nir-spectrum#readme",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.15.4",
+    "@types/jest": "^27.0.1",
+    "cheminfo-build": "^1.1.11",
+    "codecov": "^3.8.3",
+    "eslint": "^7.32.0",
+    "eslint-config-cheminfo": "^5.4.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jest": "^24.4.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "esm": "^3.2.25",
+    "jest": "^27.1.0",
+    "jest-matcher-deep-close-to": "^2.0.1",
+    "prettier": "^2.3.2",
+    "rollup": "^2.56.3"
+  },
+  "dependencies": {
+    "common-spectrum": "0.40.0",
+    "ml-gsd": "^6.7.0",
+    "spc-parser": "^0.5.1"
+  },
+  "info": {
+    "logo": "https://raw.githubusercontent.com/cheminfo/font/master/src/ir/assignment.svg",
+    "domain": [
+      "Physical Chemistry",
+      "Materials Science",
+      "Organic Chemistry"
+    ],
+    "technique": {
+      "name": "IR",
+      "chmo": "0000630",
+      "iupac": "https://goldbook.iupac.org/terms/view/IT07399"
+    },
+    "functionality": {
+      "fileTypes": [
+        {
+          "extension": "jdx",
+          "manufacturer": "IUPAC",
+          "example": "https://raw.githubusercontent.com/cheminfo/uv-vis-nir-spectrum/master/testFiles/absorbance.jdx"
+        }
+      ]
+    }
+  }
+}
